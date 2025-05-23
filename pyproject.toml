@@ -1,0 +1,18 @@
+[project]
+name = "thoughtful-ask"
+version = "0.1.0"
+description = "A simple customer support AI Agent to assist users with basic questions about a company. The agent will use predefined, hardcoded responses to answer common questions."
+authors = [
+    {name = "Dinesh Kasti",email = "dinesh.kasti@gmail.com"}
+]
+license = {text = "GNU"}
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "openai (>=1.82.0,<2.0.0)",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
