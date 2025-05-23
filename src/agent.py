@@ -4,8 +4,8 @@ import difflib
 import logging
 from pathlib import Path
 
-from llm_client import LLMClient
-from qna_loader import QNALoader
+from .llm_client import LLMClient
+from .qna_loader import QNALoader
 
 logger = logging.getLogger(__name__)
 

@@ -1,8 +1,18 @@
 """Load Q&A pairs from a JSON file."""
 
 import logging
+import os
+from pathlib import Path
 
-from agent import SupportAgent
+from dotenv import load_dotenv
+
+from .agent import SupportAgent
+
+# Load environment variables from .env in project root
+load_dotenv(dotenv_path=Path(__file__).parent.parent / ".env")
+
+# Access settings
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Configure logging to file and stdout
 logger = logging.getLogger()
@@ -39,4 +49,5 @@ def run_cli():
 
 
 if __name__ == "__main__":
+    run_cli()
     run_cli()
